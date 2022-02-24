@@ -32,14 +32,15 @@
 
 @media only screen and (max-width: 600px) {
     .navbar{
+        width: 100%;
         display: flex;
         justify-content: space-between;
-        padding: 2rem 2rem;
+        align-items: center;
+        /* padding: 0rem 5rem; */
     }
 
-    .left-nav > h1{
-        color: #fff;
-        font-size: 3rem;
+    .logo{
+        max-width: 15rem;
     }
 
     .nav{
@@ -51,17 +52,23 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: red;
+        background-color: #000;
         position: absolute;
-        margin-top: 5.6rem;
-        margin-left: -10.8rem;
+        margin-top: 7.65rem;
+        margin-left: -15rem;
         width: 100%;
+        padding: 2rem 0rem;
+        border-top: 1px solid var(--gold);
+    }
+
+    .mobile-nav > li {
+        list-style: none;
+        padding: 2rem 0rem;
     }
 
     .link {
-        list-style: none;
+        text-decoration: none;
         color: #fff;
-        padding: 2rem 0rem;
         font-size: 1.8rem;
     }
 
@@ -76,14 +83,15 @@
         background-color: rgba(0, 0, 0, 0);
         color: #fff;
         cursor: pointer;
+        margin-right: 3rem;
     }
 
     .mobile-bars{
-        font-size: 3rem;
+        font-size: 4rem;
     }
 
     .mobile-close{
-        font-size: 3.5rem;
+        font-size: 4.5rem;
     }
 }
 

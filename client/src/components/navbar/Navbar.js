@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import './navbar.css'
 import Logo from '../../images/tattoo-logo.png'
+import { NavLink } from 'react-router-dom'
+
 
 const Navbar = () => {
 
@@ -13,15 +15,15 @@ const Navbar = () => {
     return (
         <div className="navbar">
             <div className="left-nav">
-                <img src={Logo} alt="logo" />
+                <img src={Logo} className="logo" alt="logo" />
             </div>
 
             <div className="center-nav">
                 <ul className={toggleMobile ? "mobile-nav" : "nav"}>
-                    <li className="link"> Book Appointment </li>
-                    <li className="link"> About </li>
-                    <li className="link"> Artists </li>
-                    <li className="link"> Contact Us </li>
+                    <li> <NavLink to='/' className="link"> Book Appointment </NavLink> </li>
+                    <li> <NavLink to='/' className="link"> About </NavLink> </li>
+                    <li> <NavLink to='/' className="link"> Artists </NavLink> </li>
+                    <li> <NavLink to='/' className="link"> Contact Us </NavLink> </li>
                 </ul>
             </div>
 
