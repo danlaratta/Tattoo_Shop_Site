@@ -9,8 +9,8 @@ const Home = () => {
             <img src={MobileLandingImg2} className="mobile-landing" alt="Mobile Landing Img" />
             
             <div className="overlay">
-                <h2> Welcome to </h2>
-                <h1> Tattoo Shop </h1>
+                <h2 className="small-title"> Welcome to </h2>
+                <h1 className="large-title"> Tattoo Shop </h1>
                 <button></button>
             </div>
         </div>
