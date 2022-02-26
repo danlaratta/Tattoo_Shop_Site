@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import './navbar.css'
-import Logo from '../../images/tattoo-logo.png'
 import { NavLink } from 'react-router-dom'
 
 
@@ -15,7 +14,7 @@ const Navbar = () => {
     return (
         <div className="navbar">
             <div className="left-nav">
-                <img src={Logo} className="logo" alt="logo" />
+                <h1 className="logo-text"> TATTOO STUDIO </h1>
             </div>
 
             <div className="center-nav">
