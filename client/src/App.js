@@ -6,6 +6,7 @@ import About from './pages/about/About';
 import Artists from './pages/artists/Artists';
 import Book from './pages/book/Book';
 import Contact from './pages/contact/Contact';
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
           <Route path='/book' element={<Book />} />
           <Route path='/contact' element={<Contact />} />
         </Routes>
+
+        <Footer />
       </Router>
     </div>
   );

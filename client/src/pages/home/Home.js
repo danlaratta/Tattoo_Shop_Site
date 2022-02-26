@@ -10,6 +10,7 @@ import Tat1 from '../../images/tat1.jpeg'
 import Tat2 from '../../images/tat2.jpeg'
 import Tat3 from '../../images/tat3.jpeg'
 import Tat4 from '../../images/tat4.jpeg'
+
 const Home = () => {
     return (
         <div className="home">
@@ -73,6 +74,7 @@ const Home = () => {
                 <div className="recent-item">
                     <img src={Tat4} className="home-imgs" alt="tat 4" />
                 </div>
+                
             </div>
         </div>
     )

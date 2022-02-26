@@ -2,6 +2,7 @@
 .home{
     display: flex;
     flex-direction: column;
+    margin: 0;
 }
 
 .mobile-landing{
@@ -50,6 +51,7 @@
     align-items: center;
     justify-content: center;
     padding: 2rem 0rem;
+    margin-bottom: 3rem;
 }
 
 .covid-msg{
