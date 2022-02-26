@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './navbar.css'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 
 const Navbar = () => {
@@ -11,18 +11,22 @@ const Navbar = () => {
         setToggleMobile(!toggleMobile)
     }
 
+    const hideMobileNav = () => {
+        setToggleMobile(false)
+    }
+
     return (
         <div className="navbar">
             <div className="left-nav">
-                <h1 className="logo-text"> TATTOO STUDIO </h1>
+                <Link to='/' className="logo-text"> TATTOO STUDIO </Link>
             </div>
 
             <div className="center-nav">
                 <ul className={toggleMobile ? "mobile-nav" : "nav"}>
-                    <li> <NavLink to='/' className="link"> Book Appointment </NavLink> </li>
-                    <li> <NavLink to='/' className="link"> About </NavLink> </li>
-                    <li> <NavLink to='/' className="link"> Artists </NavLink> </li>
-                    <li> <NavLink to='/' className="link"> Contact Us </NavLink> </li>
+                    <li> <NavLink to='/book' className="link" onClick={hideMobileNav}> Book Appointment </NavLink> </li>
+                    <li> <NavLink to='/about' className="link" onClick={hideMobileNav}> About </NavLink> </li>
+                    <li> <NavLink to='/artists' className="link" onClick={hideMobileNav}> Artists </NavLink> </li>
+                    <li> <NavLink to='/contact' className="link" onClick={hideMobileNav}> Contact Us </NavLink> </li>
                 </ul>
             </div>
 

@@ -4,7 +4,7 @@ import './book.css'
 const Book = () => {
     return (
         <div className="book">
-
+            <h1> book </h1>
         </div>
     )
 }
