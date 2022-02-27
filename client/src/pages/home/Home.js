@@ -27,10 +27,11 @@ const Home = () => {
                 </p>
             </div>
 
+
             <div className="content">
                 <div className="content-items">
                     <div className="content-overlay1">
-                        <Link to='/about' className="content-link"> About </Link>
+                        <Link to='/about' className="content-link"> Aftercare </Link>
                     </div>
 
                     <img src={Img1} className="home-imgs" alt="img 1" />
@@ -51,7 +52,14 @@ const Home = () => {
 
                     <img src={Img3} className="home-imgs" alt="img 3" />
                 </div>
+            </div>
 
+            <div className="tattoo-info">
+                <h1> Walk-ins Welcomed! </h1>
+
+                <p>
+                Walk-ins are always welcomed, as long as we have time available. We are typically very busy so it is in your best interest to book an appointment to have your tattoo done. To book an appointment, feel free to stop in, call, or email us with all your ideas or questions. We will find a spot in the book that works best to give you the proper allotted time to take care of your custom needs. If necessary, we can book a free consultation to sit down and discuss your ideas before securing an appointment. All tattoo appointments require a $100 deposit which goes towards the total price once the tattoo is complete. 
+                </p>
             </div>
 
             <div className="recent-work">

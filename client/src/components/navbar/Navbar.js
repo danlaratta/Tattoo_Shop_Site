@@ -24,7 +24,7 @@ const Navbar = () => {
             <div className="center-nav">
                 <ul className={toggleMobile ? "mobile-nav" : "nav"}>
                     <li> <NavLink to='/book' className="link" onClick={hideMobileNav}> Book Appointment </NavLink> </li>
-                    <li> <NavLink to='/about' className="link" onClick={hideMobileNav}> About </NavLink> </li>
+                    <li> <NavLink to='/aftercare' className="link" onClick={hideMobileNav}> Aftercare </NavLink> </li>
                     <li> <NavLink to='/artists' className="link" onClick={hideMobileNav}> Artists </NavLink> </li>
                     <li> <NavLink to='/contact' className="link" onClick={hideMobileNav}> Contact Us </NavLink> </li>
                 </ul>
