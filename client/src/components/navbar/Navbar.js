@@ -18,7 +18,7 @@ const Navbar = () => {
     return (
         <div className="navbar">
             <div className="left-nav">
-                <Link to='/' className="logo-text"> TATTOO STUDIO </Link>
+                <Link to='/' className="logo-text" onClick={hideMobileNav}> TATTOO STUDIO </Link>
             </div>
 
             <div className="center-nav">

@@ -14,9 +14,9 @@ import Tat4 from '../../images/tat4.jpeg'
 const Home = () => {
     return (
         <div className="home">
-            <img src={MobileLandingImg} className="mobile-landing" alt="Mobile Landing Img" />
+            <img src={MobileLandingImg} className="home-landing" alt="home Landing Img" />
             
-            <div className="overlay">
+            <div className="home-overlay">
                 <img src={Logo} className="logo" alt="logo" />
                 <Link to='/book' className="book-link"> Book Now </Link>
             </div>
@@ -58,7 +58,7 @@ const Home = () => {
                 <h1> Walk-ins Welcomed! </h1>
 
                 <p>
-                Walk-ins are always welcomed, as long as we have time available. We are typically very busy so it is in your best interest to book an appointment to have your tattoo done. To book an appointment, feel free to stop in, call, or email us with all your ideas or questions. We will find a spot in the book that works best to give you the proper allotted time to take care of your custom needs. If necessary, we can book a free consultation to sit down and discuss your ideas before securing an appointment. All tattoo appointments require a $100 deposit which goes towards the total price once the tattoo is complete. 
+                    <strong>  Walk-ins </strong> are always welcomed, as long as we have time available. We are typically very busy so it is in your best interest to book an appointment to have your tattoo done. To book an appointment, feel free to stop in, call, or email us with all your ideas or questions. We will find a spot in the book that works best to give you the proper allotted time to take care of your custom needs. If necessary, we can book a free consultation to sit down and discuss your ideas before securing an appointment. All tattoo appointments require a $100 deposit which goes towards the total price once the tattoo is complete. 
                 </p>
             </div>
 
