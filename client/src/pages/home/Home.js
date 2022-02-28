@@ -18,7 +18,8 @@ const Home = () => {
             
             <div className="home-overlay">
                 <img src={Logo} className="logo" alt="logo" />
-                <Link to='/book' className="book-link"> Book Now </Link>
+                <h2 className="overlay-title-md"> Turn Great Designs Into </h2>
+                <h1 className="overlay-title-lg"> Great Tattoos </h1>
             </div>
 
             <div className="covid">
@@ -31,7 +32,7 @@ const Home = () => {
             <div className="content">
                 <div className="content-items">
                     <div className="content-overlay1">
-                        <Link to='/about' className="content-link"> Aftercare </Link>
+                        <Link to='/book' className="content-link"> Book Now </Link>
                     </div>
 
                     <img src={Img1} className="home-imgs" alt="img 1" />
@@ -39,7 +40,7 @@ const Home = () => {
 
                 <div className="content-items">
                     <div className="content-overlay2">
-                        <Link to='/artists' className="content-link"> Artists </Link>
+                        <Link to='/aftercare' className="content-link"> Aftercare </Link>
                     </div>
 
                     <img src={Img2} className="home-imgs" alt="img 2" />
