@@ -23,8 +23,9 @@
 
 .social-icon{
     color: var(--gold);
-    font-size: 4rem;
-    padding: 1rem;
+    font-size: 5.5rem;
+    padding: 2rem;
+    border-radius: 2rem;
 }
 
 .footer-details{
@@ -37,13 +38,13 @@
 .footer-text{
     color: #fff;
     font-size: 2.3rem;
-    padding: 1.5rem 0rem;
+    padding: 2rem 0rem;
     text-align: center;
     font-family: 'Roboto', sans-serif;
 }
 
 .footer-logo{
-    max-width: 40%;
+    max-width: 50%;
     display: block;
 }
 

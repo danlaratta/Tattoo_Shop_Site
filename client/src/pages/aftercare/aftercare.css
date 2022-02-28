@@ -59,6 +59,7 @@
     background-color: #000;
     padding: .5em 1.37em;
     text-align: center;
+    box-shadow: 0rem .8rem .8rem #888888;
 }
 
 .direction-text{

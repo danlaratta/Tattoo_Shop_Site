@@ -52,6 +52,7 @@
     justify-content: center;
     padding: 2rem 0rem;
     margin-bottom: 3rem;
+    box-shadow: 0rem .5rem .8rem #888888;
 }
 
 .covid-msg{
@@ -120,6 +121,7 @@
     max-width: 85%;
     display: block;
     border-radius: 3.5rem;
+    box-shadow: 1rem 1rem .8rem #888888;
 }
 
 .tattoo-info{
@@ -138,6 +140,7 @@
     background-color: #000;
     padding: .5em 1.37em;
     margin: 2rem 0rem;
+    box-shadow: 0rem .8rem .8rem #888888;
 }
 
 
@@ -171,6 +174,7 @@
     font-weight: 500;
     background-color: #000;
     padding: .5em 3.08em;
+    box-shadow: 0rem .8rem .8rem #888888;
 }
 
 

@@ -13,9 +13,9 @@ const Aftercare = () => {
 
             <div className="aftercare-directions">
                 <div className="direction-item">
-                    <h1 className="direction-title"> Remove Bandage </h1>
+                    <h1 className="direction-title"> Removing Bandage </h1>
                     <p className="direction-text">
-                        After waiting at least one hour post tattoo, remove your bandage and leave uncovered during the day. Your tattoo needs to breathe in order to heal properly, you can replace the bandage at night to avoid making a mess from the ointment.
+                        After waiting at least one hour post tattoo, remove your bandage(s) and leave uncovered during the day. Your tattoo needs to breathe in order to heal properly, you can replace the bandage at night to avoid making a mess from the ointment if you would like but it is best to leave uncovered.
                     </p>
                 </div>
 
