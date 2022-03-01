@@ -46,16 +46,17 @@ const Navbar = () => {
             <div className="center-nav">
                 <ul className={toggleMobile ? "mobile-nav" : "nav"}>
                     <li> <NavLink to='/book' className={({ isActive }) => (isActive ? 'active-link' : 'link')} onClick={hideMobileNav}> Book Tattoo </NavLink> </li>
-                    <li> <NavLink to='/aftercare' className={({ isActive }) => (isActive ? 'active-link' : 'link')} onClick={hideMobileNav}> Aftercare </NavLink> </li>
                     <li className="link" onClick={handleArtistLinkClick}> 
                         Artists <i className={showArtistLinks ? "caret-icon fa-solid fa-caret-up" : "caret-icon fa-solid fa-caret-down"}/>
                     </li>
                     
                     <ul className={showArtistLinks ? "artists" : "hide-artists"}>
-                        <li> <NavLink to='/artists' className={({ isActive }) => (isActive ? 'active-link' : 'link')} onClick={hideMobileNav}> Dan Smith </NavLink> </li>
-                        <li> <NavLink to='/artists' className={({ isActive }) => (isActive ? 'active-link' : 'link')} onClick={hideMobileNav}> Dana Johnson </NavLink> </li>
-                        <li> <NavLink to='/artists' className={({ isActive }) => (isActive ? 'active-link' : 'link')} onClick={hideMobileNav}> Mark Williams </NavLink> </li>
+                        <li> <NavLink to='/artists/Dan' className={({ isActive }) => (isActive ? 'active-link' : 'link')} onClick={hideMobileNav}> Dan Smith </NavLink> </li>
+                        <li> <NavLink to='/artists/Dana' className={({ isActive }) => (isActive ? 'active-link' : 'link')} onClick={hideMobileNav}> Dana Johnson </NavLink> </li>
+                        <li> <NavLink to='/artists/Mark' className={({ isActive }) => (isActive ? 'active-link' : 'link')} onClick={hideMobileNav}> Mark Williams </NavLink> </li>
                     </ul>
+
+                    <li> <NavLink to='/aftercare' className={({ isActive }) => (isActive ? 'active-link' : 'link')} onClick={hideMobileNav}> Aftercare </NavLink> </li>
                     <li> <NavLink to='/contact' className={({ isActive }) => (isActive ? 'active-link' : 'link')} onClick={hideMobileNav}> Contact Us </NavLink> </li>
                 </ul>
             </div>

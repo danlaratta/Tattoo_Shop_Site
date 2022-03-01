@@ -6,6 +6,9 @@ import Book from './pages/book/Book';
 import Contact from './pages/contact/Contact';
 import Footer from './components/footer/Footer';
 import Aftercare from './pages/aftercare/Aftercare';
+import Dan from './pages/artist-dan/ArtistDan'
+import Dana from './pages/artist-dana/ArtistDana'
+import Mark from './pages/artist-mark/ArtistMark'
 
 function App() {
   return (
@@ -16,6 +19,9 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/book' element={<Book />} />
+          <Route path='/artists/Dan' element={<Dan />} />
+          <Route path='/artists/Dana' element={<Dana />} />
+          <Route path='/artists/Mark' element={<Mark />} />
           <Route path='/aftercare' element={<Aftercare />} />
           <Route path='/contact' element={<Contact />} />
         </Routes>
