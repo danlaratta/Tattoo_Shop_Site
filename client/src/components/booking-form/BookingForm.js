@@ -7,18 +7,7 @@ import * as yup from 'yup'
 
 const BookingForm = () => {
 
-    const [name, setName] = useState('')
-    const [email, setEmail] = useState('')
     const [phone, setPhone] = useState('')
-    const [artist, setArtist] = useState('')
-    const [birthDate, setBirthDate] = useState('')
-    const [tattooLocation, setTattooLocation] = useState('')
-    const [tattooDescription, setTattooDescription] = useState('')
-
-
-    const capitalLetter = (input) => {
-        return input.charAt(0).toUpperCase() + input.slice(1)
-    }
 
     const handlePhoneInput = (e) => {
         const formattedPhoneNumber = formatPhoneNumber(e.target.value)
@@ -59,7 +48,9 @@ const BookingForm = () => {
 
     const schema = yup.object().shape({
         name: yup.string()
-            .required('Full Name is required'),
+            .required('Full Name is required')
+            .min(6, 'Not enough characters')
+            .max(30, 'Too many characters'),
 
         email: yup.string()
             .email()
@@ -78,10 +69,14 @@ const BookingForm = () => {
             .required('Artist is required'),
 
         location: yup.string()
-            .required('Tattoo Location is required'),
+            .required('Tattoo Location is required')
+            .min(3, 'Not enough characters')
+            .max(25, 'Too many characters'),
         
         description: yup.string()
-            .required('Tattoo Description is required'),
+            .required('Tattoo Description is required')
+            .min(10, 'Not enough characters')
+            .max(200, 'Too many characters'),
 
     })
 
@@ -95,13 +90,11 @@ const BookingForm = () => {
             
             <form onSubmit={handleSubmit(sendEmail)}> 
                 <div className="form-items">
-                    <label className="labels"> Full Name </label>
+                    <label className="labels"> Full Name <span className="asterik"> * </span> </label>
                     <input 
                         type="text" 
                         className="inputs" 
                         placeholder="Full Name"
-                        onChange={(e) => setName(e.target.value)}
-                        value={capitalLetter(name)} 
                         name="name"
                         { ...register('name')}
                     />
@@ -110,13 +103,11 @@ const BookingForm = () => {
                 </div>
 
                 <div className="form-items">
-                    <label className="labels"> Email Address </label>
+                    <label className="labels"> Email Address <span className="asterik"> * </span> </label>
                     <input 
                         type="email" 
                         className="inputs" 
                         placeholder="Email Address" 
-                        onChange={(e) => setEmail(e.target.value)}
-                        value={capitalLetter(email)}
                         name="email"
                         { ...register('email')}
                     />
@@ -125,27 +116,24 @@ const BookingForm = () => {
                 </div>
 
                 <div className="form-items">
-                    <label className="labels"> Phone Number </label>
+                    <label className="labels"> Phone Number <span className="asterik"> * </span> </label>
                     <input 
+                        required
                         type="text" 
                         className="inputs" 
                         placeholder="Phone Number" 
-                        onChange={(e) => handlePhoneInput(e)}
-                        value={capitalLetter(phone)} 
                         name="phone"
-                        { ...register('phone')}
+                        onChange={(e) => handlePhoneInput(e)}
+                        value={phone} 
                     />
 
-                    { errors.phone && <p className="err-msg"> {errors.phone.message} </p> }
                 </div>
 
                 <div className="form-items">
-                    <label className="labels"> Date of Birth </label>
+                    <label className="labels"> Date of Birth <span className="asterik"> * </span> </label>
                     <input 
                         type="date"
                         className="date-input"
-                        onChange={(e) => setBirthDate(e.target.value)}
-                        value={birthDate} 
                         name="birthdate"
                         { ...register('birthdate')}
                     />
@@ -154,10 +142,8 @@ const BookingForm = () => {
                 </div>
 
                 <div className="form-items">
-                    <label className="labels"> Artist </label>
+                    <label className="labels"> Artist <span className="asterik"> * </span> </label>
                     <select className="artist-select"
-                        onChange={(e) => setArtist(e.target.value)}
-                        value={artist}
                         name="artist"
                         { ...register('artist')}
                     >
@@ -171,13 +157,11 @@ const BookingForm = () => {
                 </div>
 
                 <div className="form-items">
-                    <label className="labels"> Tattoo Location </label>
+                    <label className="labels"> Tattoo Location <span className="asterik"> * </span> </label>
                     <input 
                         type="text" 
                         className="inputs" 
                         placeholder="Tattoo Location"
-                        onChange={(e) => setTattooLocation(e.target.value)}
-                        value={capitalLetter(tattooLocation)} 
                         name="location"
                         { ...register('location')}
                     />
@@ -186,12 +170,10 @@ const BookingForm = () => {
                 </div>
 
                 <div className="form-items">
-                    <label className="labels"> Tattoo Description </label>
+                    <label className="labels"> Tattoo Description <span className="asterik"> * </span> </label>
                     <textarea 
                         className="textarea" 
                         placeholder="Detailed Tattoo Description"
-                        onChange={(e) => setTattooDescription(e.target.value)}
-                        value={capitalLetter(tattooDescription)} 
                         name="description"
                         { ...register('description')}
                     />
