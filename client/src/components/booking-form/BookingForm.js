@@ -1,5 +1,9 @@
 import React, { useState } from 'react'
 import './bookingForm.css'
+import emailjs from 'emailjs-com'
+import { useForm } from 'react-hook-form'
+import { yupResolver } from '@hookform/resolvers/yup'
+import * as yup from 'yup'
 
 const BookingForm = () => {
 
@@ -13,7 +17,7 @@ const BookingForm = () => {
 
 
     const capitalLetter = (input) => {
-        return input.charAt(0).toUpperCase() + input.slice(1);
+        return input.charAt(0).toUpperCase() + input.slice(1)
     }
 
     const handlePhoneInput = (e) => {
@@ -39,9 +43,57 @@ const BookingForm = () => {
         )}-${phoneNumber.slice(6, 10)}`
     }
 
+    const sendEmail = (e) => {
+        e.preventDefault()
+    
+        emailjs.sendForm('service_muylzmp', 'template_sglc92o', e.target, 'NBj9MzKv3eg1Uitgs')
+          .then((result) => {
+              console.log(result.text)
+              window.location.reload()
+          }, (error) => {
+              console.log(error.text)
+          })
+
+          e.target.reset()
+      }
+
+    const schema = yup.object().shape({
+        name: yup.string()
+            .required('Full Name is required'),
+
+        email: yup.string()
+            .email()
+            .required('Email is required'),
+
+        phone: yup.string()
+            .required('Phone number is required'),
+
+        birthdate: yup.date()
+            .nullable()
+            .required('Date of birth is required, must be 18+ years of age')
+            .transform((curr, orig) => orig === '' ? null : curr),
+
+        artist: yup.string()
+            .ensure()
+            .required('Artist is required'),
+
+        location: yup.string()
+            .required('Tattoo Location is required'),
+        
+        description: yup.string()
+            .required('Tattoo Description is required'),
+
+    })
+
+    const { register, handleSubmit, formState: { errors } } = useForm({
+        resolver: yupResolver(schema)
+    })
+
     return (
         <div className="booking-form">
-            <form> 
+            <h1 className="form-title"> Tattoo Request Form </h1>
+            
+            <form onSubmit={handleSubmit(sendEmail)}> 
                 <div className="form-items">
                     <label className="labels"> Full Name </label>
                     <input 
@@ -49,8 +101,12 @@ const BookingForm = () => {
                         className="inputs" 
                         placeholder="Full Name"
                         onChange={(e) => setName(e.target.value)}
-                        value={name} 
+                        value={capitalLetter(name)} 
+                        name="name"
+                        { ...register('name')}
                     />
+
+                    { errors.name && <p className="err-msg"> {errors.name.message} </p> }
                 </div>
 
                 <div className="form-items">
@@ -60,8 +116,12 @@ const BookingForm = () => {
                         className="inputs" 
                         placeholder="Email Address" 
                         onChange={(e) => setEmail(e.target.value)}
-                        value={email} 
+                        value={capitalLetter(email)}
+                        name="email"
+                        { ...register('email')}
                     />
+
+                    { errors.email && <p className="err-msg"> {errors.email.message} </p> }
                 </div>
 
                 <div className="form-items">
@@ -71,8 +131,12 @@ const BookingForm = () => {
                         className="inputs" 
                         placeholder="Phone Number" 
                         onChange={(e) => handlePhoneInput(e)}
-                        value={phone} 
+                        value={capitalLetter(phone)} 
+                        name="phone"
+                        { ...register('phone')}
                     />
+
+                    { errors.phone && <p className="err-msg"> {errors.phone.message} </p> }
                 </div>
 
                 <div className="form-items">
@@ -82,19 +146,28 @@ const BookingForm = () => {
                         className="date-input"
                         onChange={(e) => setBirthDate(e.target.value)}
                         value={birthDate} 
+                        name="birthdate"
+                        { ...register('birthdate')}
                     />
+
+                    { errors.birthdate && <p className="err-msg"> {errors.birthdate.message} </p> }
                 </div>
 
                 <div className="form-items">
                     <label className="labels"> Artist </label>
                     <select className="artist-select"
                         onChange={(e) => setArtist(e.target.value)}
-                        value={artist}>
-                        <option> Choose an Artist </option>
-                        <option> Dan Smith </option>
-                        <option> Dana Johnson </option>
-                        <option> Mark Williams </option>
+                        value={artist}
+                        name="artist"
+                        { ...register('artist')}
+                    >
+                        <option value=""> Choose an Artist </option>
+                        <option value="Dan Smith"> Dan Smith </option>
+                        <option value="Dana Johnson"> Dana Johnson </option>
+                        <option value="Mark Williams"> Mark Williams </option>
                     </select>
+
+                    { errors.artist && <p className="err-msg"> {errors.artist.message} </p> }
                 </div>
 
                 <div className="form-items">
@@ -104,8 +177,12 @@ const BookingForm = () => {
                         className="inputs" 
                         placeholder="Tattoo Location"
                         onChange={(e) => setTattooLocation(e.target.value)}
-                        value={tattooLocation} 
+                        value={capitalLetter(tattooLocation)} 
+                        name="location"
+                        { ...register('location')}
                     />
+
+                    { errors.location && <p className="err-msg"> {errors.location.message} </p> }
                 </div>
 
                 <div className="form-items">
@@ -113,20 +190,13 @@ const BookingForm = () => {
                     <textarea 
                         className="textarea" 
                         placeholder="Detailed Tattoo Description"
-                        onChange={(e) => setTattooLocation(e.target.value)}
-                        value={tattooLocation} 
+                        onChange={(e) => setTattooDescription(e.target.value)}
+                        value={capitalLetter(tattooDescription)} 
+                        name="description"
+                        { ...register('description')}
                     />
-                </div>
 
-                <div className="form-items">
-                    <label className="labels"> Reference Photo </label>
-                    <input 
-                        type="file"
-                        className="file-input" 
-                        placeholder="Detailed Tattoo Description"
-                        onChange={(e) => setTattooLocation(e.target.value)}
-                        value={tattooLocation} 
-                    />
+                    { errors.description && <p className="err-msg"> {errors.description.message} </p> }
                 </div>
 
                 <div className="form-items">
