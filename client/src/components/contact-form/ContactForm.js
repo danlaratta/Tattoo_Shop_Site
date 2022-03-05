@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import './bookingForm.css'
+import './contactForm.css'
 import emailjs from 'emailjs-com'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 
-const BookingForm = () => {
+const ContactForm = () => {
 
     const [phone, setPhone] = useState('')
 
@@ -85,7 +85,7 @@ const BookingForm = () => {
     })
 
     return (
-        <div className="booking-form">
+        <div className="contact-form">
             <h1 className="form-title"> Tattoo Request Form </h1>
             
             <form onSubmit={handleSubmit(sendEmail)}> 
@@ -130,47 +130,7 @@ const BookingForm = () => {
                 </div>
 
                 <div className="form-items">
-                    <label className="labels"> Date of Birth <span className="asterik"> * </span> </label>
-                    <input 
-                        type="date"
-                        className="date-input"
-                        name="birthdate"
-                        { ...register('birthdate')}
-                    />
-
-                    { errors.birthdate && <p className="err-msg"> {errors.birthdate.message} </p> }
-                </div>
-
-                <div className="form-items">
-                    <label className="labels"> Artist <span className="asterik"> * </span> </label>
-                    <select className="artist-select"
-                        name="artist"
-                        { ...register('artist')}
-                    >
-                        <option value=""> Choose an Artist </option>
-                        <option value="Dan Smith"> Dan Smith </option>
-                        <option value="Dana Johnson"> Dana Johnson </option>
-                        <option value="Mark Williams"> Mark Williams </option>
-                    </select>
-
-                    { errors.artist && <p className="err-msg"> {errors.artist.message} </p> }
-                </div>
-
-                <div className="form-items">
-                    <label className="labels"> Tattoo Location <span className="asterik"> * </span> </label>
-                    <input 
-                        type="text" 
-                        className="inputs" 
-                        placeholder="Tattoo Location"
-                        name="location"
-                        { ...register('location')}
-                    />
-
-                    { errors.location && <p className="err-msg"> {errors.location.message} </p> }
-                </div>
-
-                <div className="form-items">
-                    <label className="labels"> Tattoo Description <span className="asterik"> * </span> </label>
+                    <label className="labels"> Message <span className="asterik"> * </span> </label>
                     <textarea 
                         className="textarea" 
                         placeholder="Detailed Tattoo Description"
@@ -189,4 +149,4 @@ const BookingForm = () => {
     )
 }
 
-export default BookingForm
+export default ContactForm

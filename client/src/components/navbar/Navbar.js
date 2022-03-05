@@ -45,7 +45,7 @@ const Navbar = () => {
             
             <div className="center-nav">
                 <ul className={toggleMobile ? "mobile-nav" : "nav"}>
-                    <li> <NavLink to='/book' className={({ isActive }) => (isActive ? 'active-link' : 'link')} onClick={hideMobileNav}> Book Tattoo </NavLink> </li>
+                    <li> <NavLink to='/book-appointment' className={({ isActive }) => (isActive ? 'active-link' : 'link')} onClick={hideMobileNav}> Book Tattoo </NavLink> </li>
                     <li className="link" onClick={handleArtistLinkClick}> 
                         Artists <i className={showArtistLinks ? "caret-icon fa-solid fa-caret-up" : "caret-icon fa-solid fa-caret-down"}/>
                     </li>

@@ -28,13 +28,12 @@ const Home = () => {
                 </p>
             </div>
 
-
             <div className="content">
                 <div className="content-items">
                     <div className="content-overlay1">
-                        <Link to='/book' className="content-link"> Book Now </Link>
+                        <Link to='/book-appointment' className="content-link"> Book Now </Link>
                     </div>
-
+                    
                     <img src={Img1} className="home-imgs" alt="img 1" />
                 </div>
 
