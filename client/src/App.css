@@ -17,6 +17,12 @@ font-family: 'Roboto Slab', serif;
   box-sizing: border-box;
 }
 
+.navbar-component{
+  z-index: 100;
+  position: sticky;
+  top: 0;
+}
+
 html{
   font-size: 62.5%;
 }

@@ -14,19 +14,25 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Navbar />
+          <div className="navbar-component">
+            <Navbar />
+          </div>
 
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/book-appointment' element={<Book />} />
-          <Route path='/artists/Dan' element={<Dan />} />
-          <Route path='/artists/Dana' element={<Dana />} />
-          <Route path='/artists/Mark' element={<Mark />} />
-          <Route path='/aftercare' element={<Aftercare />} />
-          <Route path='/contact' element={<Contact />} />
-        </Routes>
+          <div className="body-componentn">
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/book-appointment' element={<Book />} />
+              <Route path='/artists/Dan' element={<Dan />} />
+              <Route path='/artists/Dana' element={<Dana />} />
+              <Route path='/artists/Mark' element={<Mark />} />
+              <Route path='/aftercare' element={<Aftercare />} />
+              <Route path='/contact' element={<Contact />} />
+            </Routes>  
+          </div>
 
-        <Footer />
+        <div className="footer-component">
+          <Footer />  
+        </div>
       </Router>
     </div>
   );

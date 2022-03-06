@@ -104,56 +104,61 @@
     align-items: center;
     justify-content: center;
     padding: 3rem 0rem;
-    z-index: -10;
 }
 
-.content-overlay1, .content-overlay2, .content-overlay3{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 0rem auto;
-    /* background-color: rgba(0, 0, 0, 0.6); */
-    background-color: rgba(239, 26, 26, 0.6);
-    max-width: 85%;
+.container {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    max-width: 100%;
+}
+
+.home-imgs {
+    display: block;
+    width: 100%;
+    max-width: 85%;
+    border-radius: 3.5rem;
+    box-shadow: 1rem 1rem .8rem rgba(0, 0, 0, 0.5);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 7.5%;
+    right: 0;
+    width: 100%;
+    max-width: 85%;
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 3.5rem;
 }
 
-.content-overlay1{
-    top: 2.43%;
-    max-height: 28.55%;
+
+.overlay-text-container {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    max-width: 85%;
 }
 
-.content-overlay2{
-    top: 35.85%;
-    max-height: 28.31%;
-}
-
-.content-overlay3{
-    top: 69%;
-    max-height: 28.58%;
-}
-
-.content-link{
+.overlay-link{
     background-color: rgba(0, 0, 0, 0);
     border: 3px solid #fff;
-    padding: 2.5rem 1em;
     color: #fff;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 3rem;
-}
-
-.home-imgs{
-    max-width: 85%;
-    display: block;
-    border-radius: 3.5rem;
-    box-shadow: 1rem 1rem .8rem rgba(0, 0, 0, 0.5);
-    z-index: -10;
+    padding: 1em 1.5em;
+    border-radius: 1.5rem;
 }
 
 .tattoo-info{
@@ -213,6 +218,39 @@
 
 
 
+
+/* .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgb(0, 140, 186, 0.6);
+}
+
+.container:hover .overlay {
+opacity: 1;
+}
+
+.overlay-text-container {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ */
 
 
 

@@ -29,28 +29,41 @@ const Home = () => {
             </div>
 
             <div className="content">
+                
                 <div className="content-items">
-                    <div className="content-overlay1">
-                        <Link to='/book-appointment' className="content-link"> Book Now </Link>
+                    <div className="container">
+                        <img src={Img1} className="home-imgs" alt="img 1" />
+
+                        <div className="overlay">
+                            <div className="overlay-text-container">
+                                <Link to='/book-appointment' className="overlay-link"> Book Now </Link>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <img src={Img1} className="home-imgs" alt="img 1" />
                 </div>
 
                 <div className="content-items">
-                    <div className="content-overlay2">
-                        <Link to='/aftercare' className="content-link"> Aftercare </Link>
-                    </div>
+                    <div className="container">
+                        <img src={Img2} className="home-imgs" alt="img 2" />
 
-                    <img src={Img2} className="home-imgs" alt="img 2" />
+                        <div className="overlay">
+                            <div className="overlay-text-container">
+                                <Link to='/aftercare' className="overlay-link"> Aftercare </Link>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div className="content-items">
-                    <div className="content-overlay3">
-                        <Link to='/contact' className="content-link"> Contact  </Link>
-                    </div>
+                    <div className="container">
+                        <img src={Img3} className="home-imgs" alt="img 3" />
 
-                    <img src={Img3} className="home-imgs" alt="img 3" />
+                        <div className="overlay">
+                            <div className="overlay-text-container">
+                                <Link to='/contact' className="overlay-link"> Contact</Link>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
