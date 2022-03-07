@@ -6,13 +6,17 @@ import './artists.css'
 const Artists = ({ artist, description, artistImg, img1, img2, img3, img4 }) => {
     return (
         <div className="artists">
-            <div className="artist-info">
+             <div className="landing-container">
+                <img src={artistImg} className="landing-img" alt="home Landing Img" />
 
-                <img src={ artistImg } className="artists-landing" alt="artists Img" />
-            
-                <div className="artists-overlay">
-                    <h1 className="page-title"> { artist } </h1> 
-                </div>
+                <div className="landing-overlay">
+                    <div className="landing-overlay-container">
+                        <h1 className="overlay-title-lg"> {artist} </h1>
+                    </div>
+                </div> 
+            </div>
+
+            <div className="artist-info">
 
                 <p className="artist-desc">
                     <strong> { artist } </strong> { description }

@@ -14,12 +14,16 @@ import Tat4 from '../../images/tat4.jpeg'
 const Home = () => {
     return (
         <div className="home">
-            <img src={MobileLandingImg} className="home-landing" alt="home Landing Img" />
-            
-            <div className="home-overlay">
-                <img src={Logo} className="logo" alt="logo" />
-                <h2 className="overlay-title-md"> Turn Great Designs Into </h2>
-                <h1 className="overlay-title-lg"> Great Tattoos </h1>
+            <div className="home-landing-container">
+                <img src={MobileLandingImg} className="landing-img" alt="home Landing Img" />
+
+                <div className="landing-overlay">
+                    <div className="landing-overlay-container">
+                        <img src={Logo} className="logo" alt="logo" />
+                        <h2 className="overlay-title-md"> Turn Great Designs Into </h2>
+                        <h1 className="overlay-title-lg"> Great Tattoos </h1>
+                    </div>
+                </div> 
             </div>
 
             <div className="covid">
@@ -29,7 +33,6 @@ const Home = () => {
             </div>
 
             <div className="content">
-                
                 <div className="content-items">
                     <div className="container">
                         <img src={Img1} className="home-imgs" alt="img 1" />
@@ -67,19 +70,21 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className="tattoo-info">
-                <h1> Walk-ins Welcomed! </h1>
+            <div className="section-title-container">
+                <h1 className="section-title"> Walk-ins Welcomed! </h1>
+            </div>
 
+            <div className="tattoo-info">
                 <p>
                     <strong>  Walk-ins </strong> are always welcomed, as long as we have time available. We are typically very busy so it is in your best interest to book an appointment to have your tattoo done. To book an appointment, feel free to stop in, call, or email us with all your ideas or questions. We will find a spot in the book that works best to give you the proper allotted time to take care of your custom needs. If necessary, we can book a free consultation to sit down and discuss your ideas before securing an appointment. All tattoo appointments require a $100 deposit which goes towards the total price once the tattoo is complete. 
                 </p>
             </div>
 
-            <div className="recent-work">
-                <div className="recent-item">
-                    <h1 className="recent-title"> Recent Work </h1>
-                </div>
+            <div className="section-title-container">
+                <h1 className="section-title"> Recent Work </h1>
+            </div>
 
+            <div className="recent-work">
                 <div className="recent-item">
                     <img src={Tat1} className="home-imgs" alt="tat 1" />
                 </div>

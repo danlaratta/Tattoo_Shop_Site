@@ -17,18 +17,18 @@ const Footer = () => {
                         <i className="social-icon fa-brands fa-instagram-square"/>
                     </div>
                 </div>
+
+                <div className="footer-item">
+                    <div className="footer-details">
+                        <span className="footer-text"> Tuesday - Saturday <br/> 12pm - 8pm </span>
+                    </div>
+                </div>
                 
                 <div className="footer-item">
                     <div className="footer-details">
                         <span className="footer-text"> (123) 456-7890 </span>
                         <span className="footer-text"> info@tattoostudio.com </span>
                         <span className="footer-text"> 123 Tattoo Street, <br/> Toms River, NJ 08753 </span>
-                    </div>
-                </div>
-
-                <div className="footer-item">
-                    <div className="footer-details">
-                        <span className="footer-text"> Tuesday - Saturday <br/> 12pm - 8pm </span>
                     </div>
                 </div>
             </div>

@@ -1,6 +1,4 @@
 
-
-
 .aftercare{
     display: flex;
     flex-direction: column;
@@ -37,6 +35,17 @@
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 6rem;
+    animation: fadeinTitle ease-in 2s;
+}
+
+@keyframes fadeinTitle{
+    0% { 
+        opacity: 0; 
+    }
+
+    100% { 
+        opacity: 1; 
+    }
 }
 
 .aftercare-directions{
