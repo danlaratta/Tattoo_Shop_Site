@@ -14,7 +14,7 @@ import Tat4 from '../../images/tat4.jpeg'
 const Home = () => {
     return (
         <div className="home">
-            <div className="home-landing-container">
+            <div className="landing-container">
                 <img src={MobileLandingImg} className="landing-img" alt="home Landing Img" />
 
                 <div className="landing-overlay">
