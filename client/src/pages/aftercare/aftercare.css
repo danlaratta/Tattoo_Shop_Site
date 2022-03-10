@@ -1,4 +1,8 @@
 
+/************************************
+*********** MOBILE STYLES ***********
+*************************************/ 
+
 .aftercare{
     display: flex;
     flex-direction: column;
@@ -78,6 +82,36 @@
     font-family: 'Roboto', sans-serif;
     max-width: 80%;
     line-height: 4rem;
-    padding: 3rem 0rem;
+    padding: 5rem 0rem;
     margin: 0 auto;
 }
+
+/************************************
+*********** TABLET STYLES ***********
+*************************************/ 
+
+@media only screen and (min-width: 600px) {
+    .aftercare-overlay{
+        height: 88%;  
+    }
+}
+
+
+/************************************
+*********** LAPTOP STYLES ***********
+*************************************/ 
+
+@media only screen and (min-width: 1200px) {
+    
+}
+
+
+/************************************
+********** DESKTOP STYLES ***********
+*************************************/ 
+
+@media only screen and (min-width: 1800px) {
+    
+}
+
+

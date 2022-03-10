@@ -7,7 +7,6 @@ const Navbar = () => {
 
     const [toggleMobile, setToggleMobile] = useState(false)
     const [showArtistLinks, setShowArtistLinks] = useState(false)
-    const [showNavShadow, setShowNavShadow ] = useState(false)
 
     const handleIconClick = () => {
         setToggleMobile(!toggleMobile)
@@ -23,22 +22,11 @@ const Navbar = () => {
         setShowArtistLinks(!showArtistLinks)
     }
     
-    // add navbar box shadow when scrolling past the landing img 
-    const toggleNavBoxShadow = () => {
-        if(window.scrollY >= 715){
-            setShowNavShadow(true)
-        }
-        else{
-            setShowNavShadow(false)
-        }
-    }
-
-    window.addEventListener('scroll', toggleNavBoxShadow)
 
 
 
     return (
-        <div className={showNavShadow ? "shadow-navbar" : "navbar"}>
+        <div className="navbar">
             <div className="left-nav">
                 <Link to='/' className="logo-text" onClick={hideMobileNav}> TATTOO STUDIO </Link>
             </div>
@@ -65,6 +53,11 @@ const Navbar = () => {
                 <button className="mobile-icon-btn" onClick={handleIconClick}> 
                     <i className={ toggleMobile ? "mobile-close fa-solid fa-xmark" : "mobile-bars fa-solid fa-bars"}/> 
                 </button>
+
+                <div className="social-media">
+                    <i className="social-nav fa-brands fa-facebook-square"/>
+                    <i className="social-nav fa-brands fa-instagram-square"/>
+                </div>                
             </div>
         </div>
     )

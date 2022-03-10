@@ -12,16 +12,21 @@ import Tat3 from '../../images/tat3.jpeg'
 import Tat4 from '../../images/tat4.jpeg'
 
 const Home = () => {
+        
     return (
         <div className="home">
             <div className="landing-container">
-                <img src={MobileLandingImg} className="landing-img" alt="home Landing Img" />
+                <div className="landing-img-bg"> </div>
 
                 <div className="landing-overlay">
                     <div className="landing-overlay-container">
                         <img src={Logo} className="logo" alt="logo" />
-                        <h2 className="overlay-title-md"> Turn Great Designs Into </h2>
-                        <h1 className="overlay-title-lg"> Great Tattoos </h1>
+
+                        <div className="overlay-titles">
+                            <h2 className="overlay-title-md"> Turn Great Designs Into </h2>
+                            <h1 className="overlay-title-lg"> Great Tattoos </h1>
+                        </div>
+                            
                     </div>
                 </div> 
             </div>

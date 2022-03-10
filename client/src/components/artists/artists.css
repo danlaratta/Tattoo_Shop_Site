@@ -1,4 +1,7 @@
 
+/************************************
+*********** MOBILE STYLES ***********
+*************************************/ 
 
 .artists{
     display: flex;
@@ -18,7 +21,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    max-width: 100%;
+    width: 100%;
 }
 
 .landing-overlay{
@@ -28,7 +31,6 @@
     left: 0;
     right: 0;
     width: 100%;
-    max-width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -41,7 +43,6 @@
     transform: translate(-50%, -50%);
     text-align: center;
     width: 100%;
-    max-width: 100%;
 }
 
 .artist-info{
@@ -60,7 +61,7 @@
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 5.5rem;
-    animation: fadeinTitle ease-in 2s;
+    animation: fadeinTitle ease-in 1s;
 }
 
 @keyframes fadeinTitle{
@@ -98,3 +99,32 @@
     z-index: -10;
     margin: 3rem 0rem;
 }
+
+/************************************
+*********** TABLET STYLES ***********
+*************************************/ 
+
+@media only screen and (min-width: 600px) {
+    .artists-img{
+        max-width: 70%;
+    }
+}
+
+
+/************************************
+*********** LAPTOP STYLES ***********
+*************************************/ 
+
+@media only screen and (min-width: 1200px) {
+    
+}
+
+
+/************************************
+********** DESKTOP STYLES ***********
+*************************************/ 
+
+@media only screen and (min-width: 1800px) {
+    
+}
+

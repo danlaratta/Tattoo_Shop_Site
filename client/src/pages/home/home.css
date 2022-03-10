@@ -1,14 +1,21 @@
 
+/************************************
+*********** MOBILE STYLES ***********
+*************************************/ 
+
 .home{
     display: flex;
     flex-direction: column;
     margin: 0;
 }
 
-.landing-img{
-    display: block;
-    max-width: 100%;
-    object-fit: cover;
+.landing-img-bg{
+    background-image: url('/src/images/mobile-landing.jpg');
+    width: 100%;
+    height: 75vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .landing-container {
@@ -16,7 +23,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    max-width: 100%;
+    width: 100%;
 }
 
 .landing-overlay{
@@ -26,7 +33,6 @@
     left: 0;
     right: 0;
     width: 100%;
-    max-width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -39,7 +45,6 @@
     transform: translate(-50%, -50%);
     text-align: center;
     width: 100%;
-    max-width: 100%;
 }
 
 .logo{
@@ -62,7 +67,7 @@
     color: #fff;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
-    max-width: 100%;
+    width: 100%;
     text-align: center;
     opacity: 0;
     animation: fadeinText ease-in 2s forwards;
@@ -74,7 +79,7 @@
         opacity: 0;
     }
     to {
-         opacity: 1;   
+            opacity: 1;   
     }
 }
 
@@ -88,7 +93,7 @@
 }
 
 .covid{
-    max-width: 100%;
+    width: 100%;
     background-color: rgb(212, 0, 0);
     display: flex;
     align-items: center;
@@ -107,7 +112,7 @@
 }
 
 .content{
-    max-width: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -126,13 +131,12 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    max-width: 100%;
+    width: 100%;
 }
 
 .home-imgs {
     display: block;
-    width: 100%;
-    max-width: 85%;
+    width: 85%;
     border-radius: 3.5rem;
     box-shadow: 1rem 1rem .8rem rgba(0, 0, 0, 0.5);
 }
@@ -143,8 +147,7 @@
     bottom: 0;
     left: 7.5%;
     right: 0;
-    width: 100%;
-    max-width: 85%;
+    width: 85%;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 3.5rem;
 }
@@ -160,8 +163,7 @@
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
-    width: 100%;
-    max-width: 85%;
+    width: 85%;
 }
 
 .overlay-link{
@@ -174,14 +176,6 @@
     font-size: 3rem;
     padding: 1em 1.5em;
     border-radius: 1.5rem;
-}
-
-.tattoo-info{
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 .section-title-container{
@@ -201,12 +195,20 @@
     font-weight: 500;
 }
 
+.tattoo-info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .tattoo-info > p{
     font-size: 2.2rem;
     font-family: 'Roboto', sans-serif;
     max-width: 80%;
     line-height: 4rem;
-    padding: 3rem 0rem;
+    padding: 5rem 0rem;
 }
 
 .recent-work{
@@ -214,15 +216,114 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 100%;
+    width: 100%;
     padding: 3rem 0rem;
 }
 
 .recent-item{
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 3rem 0rem;
+}
+
+/************************************
+*********** TABLET STYLES ***********
+*************************************/ 
+
+@media only screen and (min-width: 600px) {
+    .landing-img-bg{
+        height: 78vh;
+    }
+
+    .overlay{
+        left: 15%;
+    }
+
+    .overlay, .overlay-text-container {
+        width: 70%;
+    }
+
+    .home-imgs {
+        width: 70%;
+    }
+}
+
+
+/************************************
+*********** LAPTOP STYLES ***********
+*************************************/ 
+
+@media only screen and (min-width: 1200px) {
+    .landing-img-bg{
+        height: 84vh;
+    }
+
+    .logo{
+        max-width: 28%;
+    }
+
+    @keyframes fadeinLogo{
+        0% { 
+            opacity: 0; 
+        }
+    
+        100% { 
+            opacity: 1; 
+        }
+    }
+    
+    
+    @keyframes fadeinText{
+        from {
+            opacity: 0;
+        }
+        to {
+                opacity: 1;   
+        }
+    }
+
+    .landing-overlay-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10rem;
+    }
+
+    .overlay-title-md{
+        font-size: 5rem;
+        padding: 1rem 0rem;
+    }
+    
+    .overlay-title-lg{
+        font-size: 7.5rem;
+    }
+}
+
+
+/************************************
+********** DESKTOP STYLES ***********
+*************************************/ 
+
+@media only screen and (min-width: 1800px) {
+    
+    .landing-img-bg{
+        height: 100vh;
+    }
+
+    .landing-overlay-container{
+        position: relative;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 100%;
+    }
+
+    
 }
 
 

@@ -1,4 +1,8 @@
 
+/************************************
+*********** MOBILE STYLES ***********
+*************************************/ 
+
 .booking-form{
     display: flex;
     flex-direction: column;
@@ -122,6 +126,33 @@ input[type="file"]::-webkit-file-upload-button{
 .asterik{
     color:red;
 }
+
+/************************************
+*********** TABLET STYLES ***********
+*************************************/ 
+
+@media only screen and (min-width: 600px) {
+    
+}
+
+
+/************************************
+*********** LAPTOP STYLES ***********
+*************************************/ 
+
+@media only screen and (min-width: 1200px) {
+    
+}
+
+
+/************************************
+********** DESKTOP STYLES ***********
+*************************************/ 
+
+@media only screen and (min-width: 1800px) {
+    
+}
+
 
 
 
