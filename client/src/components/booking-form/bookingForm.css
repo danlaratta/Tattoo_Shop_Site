@@ -142,15 +142,14 @@ input[type="file"]::-webkit-file-upload-button{
 *************************************/ 
 
 @media only screen and (min-width: 1200px) {
-    
-}
+    .inputs, .date-input, .artist-select, .textarea, .file-input, .submit-btn{
+        width: 50%;
+        margin: 0 auto;
+    }
 
-
-/************************************
-********** DESKTOP STYLES ***********
-*************************************/ 
-
-@media only screen and (min-width: 1800px) {
+    .labels{
+        margin-left: 25%;
+    }
     
 }
 

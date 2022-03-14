@@ -38,7 +38,7 @@ const Navbar = () => {
                         Artists <i className={showArtistLinks ? "caret-icon fa-solid fa-caret-up" : "caret-icon fa-solid fa-caret-down"}/>
                     </li>
                     
-                    <ul className={showArtistLinks ? "artists" : "hide-artists"}>
+                    <ul className={showArtistLinks ? "artists-list" : "hide-artists-list"}>
                         <li> <NavLink to='/artists/Dan' className={({ isActive }) => (isActive ? 'active-link' : 'link')} onClick={hideMobileNav}> Dan Smith </NavLink> </li>
                         <li> <NavLink to='/artists/Dana' className={({ isActive }) => (isActive ? 'active-link' : 'link')} onClick={hideMobileNav}> Dana Johnson </NavLink> </li>
                         <li> <NavLink to='/artists/Mark' className={({ isActive }) => (isActive ? 'active-link' : 'link')} onClick={hideMobileNav}> Mark Williams </NavLink> </li>

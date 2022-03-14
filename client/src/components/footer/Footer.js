@@ -8,7 +8,8 @@ const Footer = () => {
         <div className="footer">
             <div className="footer-wrapper">
                 <div className="footer-item">
-                    <img src={Logo} className="footer-logo" alt="footer logo" />
+                    {/* <img src={Logo} className="footer-logo" alt="footer logo" /> */}
+                    <Link to='/'> <img src={Logo} className="footer-logo" alt="footer logo" /> </Link>
                 </div>
 
                 <div className="footer-item">
@@ -16,9 +17,7 @@ const Footer = () => {
                         <i className="social-icon fa-brands fa-facebook-square"/>
                         <i className="social-icon fa-brands fa-instagram-square"/>
                     </div>
-                </div>
 
-                <div className="footer-item">
                     <div className="footer-details">
                         <span className="footer-text"> Tuesday - Saturday <br/> 12pm - 8pm </span>
                     </div>

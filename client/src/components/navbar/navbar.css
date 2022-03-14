@@ -27,7 +27,7 @@
 .logo-text{
     color: #fff;
     font-size: 2.75rem;
-    max-width: 100%;
+    
     font-family: 'Roboto Slab', serif;
     text-decoration: none;
 }
@@ -46,7 +46,7 @@
     top: 10.5rem;
     left: 0;
     right: 0;
-    max-width: 100%;
+    
     border-top: .1rem solid #fff;
     border-bottom: .1rem solid #fff;
     box-shadow: 0rem .5rem .8rem rgba(0, 0, 0, 0.5);
@@ -58,7 +58,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 100%;
+    
     border-top: .1rem solid rgba(87, 87, 87, 0.3);
     border-bottom: .1rem solid rgba(201, 201, 201, 0.3);
 }
@@ -74,17 +74,14 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 100%;
 }
 
 .active-link{
     text-decoration: none;
-    /* color: var(--gold); */
     color: #000;
     background-color: var(--gold);
     padding: 3rem 0rem;
     width: 100%;
-    max-width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -93,29 +90,27 @@
     font-weight: 500;
 }
 
-.artists{
+.artists-list{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 100%;
-    
 }
 
-.artists > li {
+.artists-list > li {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     list-style: none;
     width: 100%;
-    max-width: 100%;
+    
     border-top: .1rem solid rgba(87, 87, 87, 0.3);
     border-bottom: .1rem solid rgba(201, 201, 201, 0.3);
 }
 
-.hide-artists{
+.hide-artists-list{
     display: none;
 }
 
@@ -155,9 +150,9 @@
 }   
 
 
-/************************************
-*********** LAPTOP STYLES ***********
-*************************************/ 
+/********************************************
+*********** LAPTOP/DESKTOP STYLES ***********
+********************************************/ 
 
 @media only screen and (min-width: 1200px) {
         
@@ -179,6 +174,10 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
+    }
+
+    .logo-text:hover{
+        font-size: 3rem;
     }
 
     .center-nav{
@@ -230,21 +229,28 @@
 
     }
 
+    .social-nav:hover{
+        cursor: pointer;
+        font-size: 4rem;
+    }
+
     .active-link{
         color: var(--gold);
         background-color: rgba(0, 0, 0, 0);
     }
 
+    .link:hover, .active-link:hover {
+        cursor: pointer;
+        color: var(--gold);
+        font-size: 2.75rem;
+    }
 
-    
-}
-
-
-/************************************
-********** DESKTOP STYLES ***********
-*************************************/ 
-
-@media only screen and (max-width: 1800px) {
+    .artists-list{
+        background-color: #000;
+        position: absolute;
+        margin-top: 38rem;
+        width: 20%;
+    }
     
 }
 

@@ -44,7 +44,7 @@ const Home = () => {
 
                         <div className="overlay">
                             <div className="overlay-text-container">
-                                <Link to='/book-appointment' className="overlay-link"> Book Now </Link>
+                                <Link to='/book-appointmen' className="overlay-link"> Book Now </Link>
                             </div>
                         </div>
                     </div>
@@ -91,19 +91,19 @@ const Home = () => {
 
             <div className="recent-work">
                 <div className="recent-item">
-                    <img src={Tat1} className="home-imgs" alt="tat 1" />
+                    <img src={Tat1} className="recent-imgs" alt="tat 1" />
                 </div>
 
                 <div className="recent-item">
-                    <img src={Tat2} className="home-imgs" alt="tat 2" />
+                    <img src={Tat2} className="recent-imgs" alt="tat 2" />
                 </div>
 
                 <div className="recent-item">
-                    <img src={Tat3} className="home-imgs" alt="tat 3" />
+                    <img src={Tat3} className="recent-imgs" alt="tat 3" />
                 </div>
 
                 <div className="recent-item">
-                    <img src={Tat4} className="home-imgs" alt="tat 4" />
+                    <img src={Tat4} className="recent-imgs" alt="tat 4" />
                 </div>
                 
             </div>
