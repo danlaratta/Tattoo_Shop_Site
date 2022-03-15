@@ -91,6 +91,13 @@
     justify-content: center;
 }
 
+.portfolio-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
 .artists-img{
     max-width: 85%;
     display: block;
@@ -126,19 +133,29 @@
     .artist-desc{
         font-size: 2.4rem;
         max-width: 60%;
+        margin-top: 3rem;
+        margin-bottom: 5rem;
     }
-    
+
     .portfolio-images{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
+        margin: 0 auto;
+        width: 75%;
     }
     
-    .artists-img{
-        flex-basis: 100%;
-        width: 45%;
+    .portfolio-item{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
     }
+
+    .artists-img{
+        width: 75%;
+        margin-bottom: 3rem;
+    }
+
 }
 

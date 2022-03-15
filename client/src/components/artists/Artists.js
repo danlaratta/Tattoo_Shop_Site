@@ -23,14 +23,37 @@ const Artists = ({ artist, description, artistImg, img1, img2, img3, img4 }) => 
                 </p>
 
                 <div className="portfolio-images">
-                    <img src={img1} className="artists-img" alt="artists Img" />
-                    <img src={img2} className="artists-img" alt="artists Img" />
-                    <img src={img3} className="artists-img" alt="artists Img" />
-                    <img src={img4} className="artists-img" alt="artists Img" />
-                    <img src={img1} className="artists-img" alt="artists Img" />
-                    <img src={img2} className="artists-img" alt="artists Img" />
-                    <img src={img3} className="artists-img" alt="artists Img" />
-                    <img src={img4} className="artists-img" alt="artists Img" />
+                    <div className="portfolio-item">
+                        <img src={img1} className="artists-img" alt="artists Img" />
+                    </div>
+
+                    <div className="portfolio-item">
+                        <img src={img2} className="artists-img" alt="artists Img" />
+                    </div>
+
+                    <div className="portfolio-item">
+                        <img src={img3} className="artists-img" alt="artists Img" />
+                    </div>
+
+                    <div className="portfolio-item">
+                        <img src={img4} className="artists-img" alt="artists Img" />
+                    </div>
+
+                    <div className="portfolio-item">
+                        <img src={img1} className="artists-img" alt="artists Img" />
+                    </div>
+
+                    <div className="portfolio-item">
+                        <img src={img2} className="artists-img" alt="artists Img" />
+                    </div>
+
+                    <div className="portfolio-item">
+                        <img src={img3} className="artists-img" alt="artists Img" />
+                    </div>
+
+                    <div className="portfolio-item">
+                        <img src={img4} className="artists-img" alt="artists Img" />
+                    </div>
                 </div>
 
                 

@@ -59,36 +59,23 @@ const ContactForm = () => {
         phone: yup.string()
             .required('Phone number is required'),
 
-        birthdate: yup.date()
-            .nullable()
-            .required('Date of birth is required, must be 18+ years of age')
-            .transform((curr, orig) => orig === '' ? null : curr),
-
-        artist: yup.string()
-            .ensure()
-            .required('Artist is required'),
-
-        location: yup.string()
-            .required('Tattoo Location is required')
-            .min(3, 'Not enough characters')
-            .max(25, 'Too many characters'),
         
         description: yup.string()
-            .required('Tattoo Description is required')
+            .required('Your message is required')
             .min(10, 'Not enough characters')
             .max(200, 'Too many characters'),
 
     })
 
-    const { register, handleSubmit, formState: { errors } } = useForm({
+    const { register, formState: { errors } } = useForm({
         resolver: yupResolver(schema)
     })
 
     return (
         <div className="contact-form">
-            <h1 className="form-title"> Tattoo Request Form </h1>
+            <h1 className="form-title"> Contact Form </h1>
             
-            <form onSubmit={handleSubmit(sendEmail)}> 
+            <form onSubmit={sendEmail}> 
                 <div className="form-items">
                     <label className="labels"> Full Name <span className="asterik"> * </span> </label>
                     <input 
@@ -133,7 +120,7 @@ const ContactForm = () => {
                     <label className="labels"> Message <span className="asterik"> * </span> </label>
                     <textarea 
                         className="textarea" 
-                        placeholder="Detailed Tattoo Description"
+                        placeholder="Your Message"
                         name="description"
                         { ...register('description')}
                     />
@@ -142,7 +129,7 @@ const ContactForm = () => {
                 </div>
 
                 <div className="form-items">
-                    <button type="submit" className="submit-btn"> Submit </button>
+                    <input type="submit" className="submit-btn" value="Submit"/>
                 </div>
             </form>
         </div>

@@ -8,6 +8,7 @@ import * as yup from 'yup'
 const BookingForm = () => {
 
     const [phone, setPhone] = useState('')
+    const [isSuccessful, setIsSuccessful] = useState(false)
 
     const handlePhoneInput = (e) => {
         const formattedPhoneNumber = formatPhoneNumber(e.target.value)
@@ -80,7 +81,7 @@ const BookingForm = () => {
 
     })
 
-    const { register, handleSubmit, formState: { errors } } = useForm({
+    const { register, formState: { errors } } = useForm({
         resolver: yupResolver(schema)
     })
 
@@ -88,7 +89,7 @@ const BookingForm = () => {
         <div className="booking-form">
             <h1 className="form-title"> Tattoo Request Form </h1>
             
-            <form onSubmit={handleSubmit(sendEmail)}> 
+            <form onSubmit={sendEmail}> 
                 <div className="form-items">
                     <label className="labels"> Full Name <span className="asterik"> * </span> </label>
                     <input 
@@ -182,7 +183,7 @@ const BookingForm = () => {
                 </div>
 
                 <div className="form-items">
-                    <button type="submit" className="submit-btn"> Submit </button>
+                    <input type="submit" className="submit-btn" value="Submit"/>
                 </div>
             </form>
         </div>

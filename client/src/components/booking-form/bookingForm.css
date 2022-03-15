@@ -151,5 +151,13 @@ input[type="file"]::-webkit-file-upload-button{
         margin-left: 25%;
     }
     
+    .submit-btn{
+        cursor: pointer;
+    }
+
+    .err-msg{
+        margin: 0 auto;
+    }
+    
 }
 

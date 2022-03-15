@@ -142,14 +142,26 @@ input[type="file"]::-webkit-file-upload-button{
 
 @media only screen and (min-width: 1200px) {
     
-}
+    .form-title{
+        text-align: center;
+    }
 
+    .inputs, .submit-btn{
+        width: 50%;
+        margin: 0 auto;
+    }
 
-/************************************
-********** DESKTOP STYLES ***********
-*************************************/ 
+    .submit-btn{
+        cursor: pointer;
+    }
 
-@media only screen and (min-width: 1800px) {
+    .labels{
+        margin-left: 25%;
+    }
+
+    .err-msg{
+        margin: 0 auto;
+    }
     
 }
 
