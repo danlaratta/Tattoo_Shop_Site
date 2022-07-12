@@ -13,7 +13,7 @@ import Mark from './pages/artist-mark/ArtistMark'
 function App() {
   return (
     <div className="App">
-      <Router>
+      
           <div className="navbar-component">
             <Navbar />
           </div>
@@ -33,7 +33,6 @@ function App() {
         <div className="footer-component">
           <Footer />  
         </div>
-      </Router>
     </div>
   );
 }
